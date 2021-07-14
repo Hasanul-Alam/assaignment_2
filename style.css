@@ -180,12 +180,18 @@ header{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
+    .highlights_title{
+        width: 100%;
+    }
+    .highlights_title h2{
+        font-size: 25px;
+    }
+    .highlight_image img{
+        width: 100%;
+    }
     .highlight{
         display: flex;
         flex-direction: column;
-    }
-    .highlights_title h2{
-        font size: 16px;
     }
     .highlight_image {
         margin-top: 50px;
