@@ -3,19 +3,35 @@
 -----------------------*/
 body{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 header{
     background-color: #2D25A0;
     padding-bottom: 100px;
 }
-main{
-    max-width: 80%;
-    margin: 0 auto;
+.button{
+    text-decoration: none;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #E02C6D;
+    padding: 10px 20px;
 }
-.banner{
+.button:hover{
+    background-color: red;
+    padding: 15px 25px;
+    transition: padding .3s;
+}
+
+/* -----------------
+    style started 
+----------------*/
+
+#banner{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    max-width: 80%;
+    margin: 0 auto;
 }
 .banner_left{
     width: 50%;
@@ -25,19 +41,157 @@ main{
     font-size: 92px;
     font-weight: bold;
 }
-.banner_left .button{
-    text-decoration: none;
-    font-size: 16px;
-    color: #FFFFFF;
-    background-color: #E02C6D;
-    padding: 10px 20px;
-}
 .fa-arrow-right{
     margin-left: 15px;
 }
-.banner_right{
-    
-}
 .banner_right img{
     width: 556px;
+}
+
+/*------------------------ 
+    player section 
+----------------------*/
+
+#players{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 60%;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding-bottom: 150px;
+}
+.player{
+    width: 300px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 15px #6C6C6C;
+    margin-top: 30px;
+}
+.player_image{
+    margin-bottom: 10px;
+}
+.player_image img{
+    width: 100%;
+}
+.player_des h2{
+    font-weight: bold;
+    font-size: 28px;
+    margin: 0 0 8px 0;
+}
+.player_des p{
+    margin: 0;
+    color: #6C6C6C;
+    font-size: 16px;
+}
+
+/*--------------------------- 
+    highlights_section 
+-------------------------*/
+
+#highlights{
+    max-width: 65%;
+    margin: 0 auto;
+    padding-bottom: 200px;
+}
+.highlight{
+    display: flex;
+    justify-content: space-between;
+}
+.highlights_title{
+    width: 636px;
+}
+.highlights_title h2{
+    font-weight: bold;
+    font-size: 65px;
+    margin: 0;
+}
+.highlights_title p{
+    margin: 5px 0;
+    width: 90%;
+    line-height: 1.8;
+    color: #6C6C6C;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+.highlight_image img{
+    width: 565px;
+}
+/*-------------------- 
+    footer section 
+-------------------*/
+.footer_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer_image{
+    width: 485px;
+}
+.footer_image img{
+    width: 100%;
+}
+.social_media ul{
+    display: flex;
+}
+.social_media ul li{
+    list-style-type: none;
+    margin-left: 10px;
+    background-color: lightgray;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+}
+.social_media ul li a{
+    text-align: center;
+}
+.social_media a{
+    text-decoration: none;
+    color: black;
+}
+.copyright{
+    font-size: 18px;
+}
+.fa-copyright{
+    font-size: 14px;
+}
+
+/*--------------------------- 
+    making responsive only for mobile devices
+-------------------------*/
+
+@media only screen and (max-width: 688px) {
+    
+    #banner{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .banner_left h1{
+        font-size: 32px;
+    }
+    .banner_right img{
+        width: 100%;
+        margin-top: 70px;
+    }
+    #players{
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .highlight{
+        display: flex;
+        flex-direction: column;
+    }
+    .highlights_title h2{
+        font size: 16px;
+    }
+    .highlight_image {
+        margin-top: 50px;
+    }
+    .footer_image{
+        width: 80%;
+    }
+    
 }
